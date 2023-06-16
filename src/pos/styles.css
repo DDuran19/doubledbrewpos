@@ -1,0 +1,157 @@
+:root{
+    --text: #07010e;
+    --background: #ffffff;
+    --primary-button: #743c0bc7;
+    --secondary-button: #f7f1fe;
+    --accent: #02170c;
+
+    --primary-button-hover: #743c0b94 ;
+    --main-theme-biege: #f8d4bc;
+    --main-theme-green: #bcf8d4;
+    --DDB-logo: url("../images/logo/ddb_wide_logo.png");
+}
+
+*,*::before*::after {
+    box-sizing: border-box;}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    color:var(--text)}
+html{
+    color-scheme: light;}
+body {
+    background-color: var(--background);
+    color: var(--text);
+    overflow: hidden;
+}
+img{
+    width: 200px;
+}
+
+.main-grid{
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: 
+        minmax(auto, max-content) 
+        minmax(auto, max-content)
+        1fr;
+}
+.flavors{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 100vh;
+    max-height: 100svh;
+    padding: 10px;
+    width: fit-content;
+    
+}
+.flavor-name{
+    font-weight: bold;
+}
+.flavor-container{
+    border-radius: 20px;
+    margin-bottom: 1px;
+    padding-left: 20px;
+    display: block;
+    cursor:pointer;
+}
+.container{
+    font-size: clamp(0.4em, 0.8vw + 0.4em, 1.2em);
+    border: 2px solid gray;
+    background-color: var(--secondary-button);
+}
+input[type=radio], input[type=checkbox]{
+    display: none;
+    cursor: pointer;
+}
+#flavorList > input:checked + .flavor-container,
+#series-container>input:checked + .control-item,
+#addon-container>input:checked + .control-item,
+#sizes-container>input:checked + .control-item{background-color: var(--main-theme-green); border-color: black;}
+
+#series-container,
+#addon-container,
+#sizes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; 
+    align-items: center;
+    justify-content: space-between;
+    padding: min(20px, 4rem);
+    border: 1px solid gray;
+    background-color: var(--background-gradient);
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+}
+#series-container, #sizes-container{
+    margin-bottom: 1rem;
+}
+#addon-container{
+    margin-bottom: 0.5rem;
+}
+.control-item{
+    flex-basis: 47%; 
+    min-width: 47%;
+    text-align: center;
+    }
+@media (max-width: 952px) {
+    .control-item{
+        flex-basis: 100%; 
+    }
+    }
+@media(max-height: 490px){
+    .controls-container{
+        overflow-y: scroll;
+        max-height: 100vh;
+        max-height: 100svh;
+
+    }
+}
+.container-title{
+    position: absolute;
+    top:-10px;
+    border-radius: 5px;
+    padding-inline: 10px;
+    border: 1px solid gray;
+    background-color: var(--main-theme-biege);
+    font-weight: bold;
+}
+
+#addToCart {
+    color: white;
+    padding: 10px 20px;
+    background-color: var(--primary-button);
+    border: 1px solid;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 80%;
+    font-weight: bold;
+    margin-left: 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+  }
+  
+  #addToCart:hover {
+    background-color: var(--primary-button-hover);
+  }
+  
+  
+
+.transaction{
+    margin-right: 20px;
+}
+
+
+.green{color: green}
+.red{color: red;    font-weight: bold; text-decoration: line-through;}
+
+.grid-col-span-2{
+    grid-column: span 2;
+}
+
+.grid-row-span-2{
+    grid-row:2 span;
+}
