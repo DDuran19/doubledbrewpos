@@ -30,7 +30,7 @@ export default function Login({ onLoginSuccess }) {
 
     return (
         <>
-            <div className="container">
+            <div className="loginContainer">
                 <h2>Login</h2>
                 <form id="loginForm" onSubmit={handleLoginFormSubmit} action="pos/pos_app.html" method="POST">
                     <div className="form-group">
