@@ -1,5 +1,5 @@
 import { Form, Row, Col, Card } from "react-bootstrap";
-import seriesItems from "../../../../public/data/series.json";
+import seriesItems from "../../../data/series.json";
 import { useSeriesFilter } from "../../../context/SeriesFilterContext";
 import { useSizeFilter } from "../../../context/SizeFilterContext";
 

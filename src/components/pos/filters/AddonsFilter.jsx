@@ -1,4 +1,4 @@
-import addonsItems from '../../../../public/data/addons.json'
+import addonsItems from '../../../data/addons.json'
 import { Card, Row, Col, Form } from 'react-bootstrap'
 
 export function AddonsFilter() {

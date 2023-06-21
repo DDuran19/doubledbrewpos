@@ -1,4 +1,4 @@
-    import milkteaFlavors from "../../../public/data/milkteaFlavors.json"
+    import milkteaFlavors from "../../data/milkteaFlavors.json"
     import { Col, Row } from "react-bootstrap";
     import { Flavor } from "./flavor";
 

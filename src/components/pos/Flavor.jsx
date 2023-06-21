@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 import PropTypes from "prop-types";
-import seriesItems from "../../../public/data/series.json"
+import seriesItems from "../../data/series.json"
 import { useSeriesFilter } from "../../context/SeriesFilterContext";
 import { useSizeFilter } from "../../context/SizeFilterContext";
 
