@@ -5,11 +5,9 @@ export default function signIn(email, password) {
   return new Promise((resolve, reject) => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        // Signed in
+        
         const user = userCredential.user;
-        // ...
-        console.log("Success!", user);
-        resolve(true);
+        resolve(user);
       })
       .catch((error) => {
         const errorCode = error.code;

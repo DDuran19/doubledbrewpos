@@ -15,7 +15,7 @@ export default function Login({ onLoginSuccess }) {
         try {
             const loginSuccessful = await signIn(email, password);
             if (loginSuccessful) {
-                onLoginSuccess();
+                onLoginSuccess(loginSuccessful);
             } else {
                 window.alert("Invalid login. Please check your credentials.");
             }

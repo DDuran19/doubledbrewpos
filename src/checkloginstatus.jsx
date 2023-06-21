@@ -4,17 +4,18 @@ import Pos_app from './pos/Pos_app.jsx';
 
 export default function CheckLoginStatus() {
     const [loggedIn, setLoggedIn] = useState(false);
+    const [user, setUser] = useState();
   
-    const handleLoginSuccess = () => {
-        console.log("Check Login Status returned True")
-      setLoggedIn(true);
+    const handleLoginSuccess = (user) => {
+        setUser(user)
+        setLoggedIn(true);
     };
   
     return (
       <>
         <div className="">
           {loggedIn ? (
-            <Pos_app />
+            <Pos_app user ={user}/>
           ) : (
             <Login onLoginSuccess={handleLoginSuccess} />
           )}

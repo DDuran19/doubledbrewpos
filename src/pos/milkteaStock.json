@@ -1,5 +1,5 @@
 [
-    {"flavor": "Classic", "instock": true, "amount": 250},
+    {"flavor": "Classic", "instock": true, "amount": 250, "series":"Milktea"},
     {"flavor": "Taro", "instock": true, "amount": 200},
     {"flavor": "Matcha", "instock": false, "amount": 0},
     {"flavor": "Honeydew", "instock": true, "amount": 220},
