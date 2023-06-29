@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import "bootstrap/dist/css/bootstrap.min.css"
 import CheckLoginStatus from './checkloginstatus.jsx'
+import { UserProvider } from './context/UserContext.jsx'
 /*A <BrowserRouter> stores the current location in the browser's address bar 
     using clean URLs and navigates using the browser's built-in history stack.
   USAGE: 
@@ -21,7 +22,9 @@ import CheckLoginStatus from './checkloginstatus.jsx'
     */
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <CheckLoginStatus />
-  </React.StrictMode>,
+    <React.StrictMode>
+        <UserProvider>
+            <CheckLoginStatus />
+        </UserProvider>
+    </React.StrictMode>,
 )

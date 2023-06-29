@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from "react";
 
 const SeriesFilterContext = createContext({});
 
+// eslint-disable-next-line react-refresh/only-export-components
 export function useSeriesFilter() {
     return useContext(SeriesFilterContext)
 }

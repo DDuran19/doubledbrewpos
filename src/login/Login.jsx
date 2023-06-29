@@ -21,6 +21,7 @@ export default function Login({ onLoginSuccess }) {
             }
         } catch (error) {
             window.alert("An error occurred during login. Please try again.");
+            console.log(error)
         } finally {
             setLoading(false);
         }

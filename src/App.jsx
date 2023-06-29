@@ -25,19 +25,19 @@ import { Inventory } from "./pages/Inventory"
 import { Navbar } from "./components/Navbar"
 
 export default function App() {
-  return (
-    <>
-      <Navbar/>
-      <Container className="mb-4"> 
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/pos" element={<Pos />}></Route>
-        <Route path="/inventory" element={<Inventory />}></Route>
+    return (
+        <>
 
-      </Routes>
-      </Container>
+            <Navbar />
+            <Container className="mb-4">
+                <Routes>
+                    <Route path="/" element={<Home />}></Route>
+                    <Route path="/pos" element={<Pos />}></Route>
+                    <Route path="/inventory" element={<Inventory />}></Route>
 
-    </>
-  )
+                </Routes>
+            </Container>
+        </>
+    )
 }
 

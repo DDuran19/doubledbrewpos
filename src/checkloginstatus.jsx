@@ -3,16 +3,16 @@ import Login from './login/Login.jsx'
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import Startup from "./components/Startup.jsx";
+import { useUser } from "./context/UserContext.jsx";
 
 export default function CheckLoginStatus() {
     const [loggedIn, setLoggedIn] = useState(false);
-    const [user, setUser] = useState();
+    const { setUser} = useUser();
 
     const handleLoginSuccess = (user) => {
         setUser(user)
         setLoggedIn(true);
     };
-    console.log(user)
     return (
         <>
             <div className="">
