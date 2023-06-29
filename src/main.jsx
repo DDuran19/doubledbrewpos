@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import "bootstrap/dist/css/bootstrap.min.css"
-
 import CheckLoginStatus from './checkloginstatus.jsx'
 /*A <BrowserRouter> stores the current location in the browser's address bar 
     using clean URLs and navigates using the browser's built-in history stack.
