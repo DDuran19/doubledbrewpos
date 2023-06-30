@@ -7,7 +7,7 @@ import { useUser } from "./context/UserContext.jsx";
 
 export default function CheckLoginStatus() {
     const [loggedIn, setLoggedIn] = useState(false);
-    const { setUser} = useUser();
+    const { setUser } = useUser();
 
     const handleLoginSuccess = (user) => {
         setUser(user)

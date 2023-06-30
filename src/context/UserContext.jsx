@@ -1,8 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import PropTypes from 'prop-types';
-import { usersCollectionRef } from "../../firebase-config";
-import { query, where, getDocs } from "firebase/firestore";
-
+import { getDoc, doc } from "firebase/firestore";
+import { firestoreDB } from "../../firebase-config";
 const UserContext = createContext({});
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -15,17 +14,18 @@ export function UserProvider({ children }) {
 
     const getUserDetails = async (uid) => {
         try {
-            const q = query(usersCollectionRef, where('email', "==", uid));
-            const querySnapshot = await getDocs(q);
+            const userReference = doc(firestoreDB, "users", uid)
+            const querySnapshot = await getDoc(userReference)
+            console.log(querySnapshot)
 
             if (!querySnapshot.empty) {
-                // User document found, return the data
-                const userData = querySnapshot.docs[0].data();
-                // console.log(userData.displayName);
+                
+                const userData = querySnapshot.data();
+                
                 const { phoneNumber, displayName, email, branch, role } = userData;
                 return { phoneNumber, displayName, email, branch, role };
             } else {
-                // User document not found
+                
                 console.log("User document not found.");
                 return null;
             }

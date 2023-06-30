@@ -1,0 +1,11 @@
+Firebase - Firestore Reactjs project
+I have `users` collection which contains fields: displayName, email, role, branch
+- role can be Franchisee or employee.
+- users with `Franchisee` as role have `employees` subcollection
+
+
+the `employees` is a subcollection for each user in `users` collection. 
+the `employees` have documents (the document's id is the same as the UID of the user)
+
+each document has a field called `userDetailsReference` Type: reference
+The value for the field, is the same as the document id of the user being referenced to.

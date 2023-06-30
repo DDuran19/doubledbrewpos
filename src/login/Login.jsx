@@ -33,7 +33,7 @@ export default function Login({ onLoginSuccess }) {
         <>
             <div className="loginContainer">
                 <h2>Login</h2>
-                <form id="loginForm" onSubmit={handleLoginFormSubmit} action="pos/pos_app.html" method="POST">
+                <form id="loginForm" onSubmit={handleLoginFormSubmit} >
                     <div className="form-group">
                         <label htmlFor="username">Email Address</label>
                         <input type="text" id="username" placeholder="Enter your registered email address" required autoComplete="true" ></input>
