@@ -31,9 +31,9 @@ export function ShowEmployees() {
     }, [employees]);
     console.log(employeeDetails)
     return (
-        <Card>
+        <Card style={{height: "min(80vh,80svh)", overflowY: "scroll"}}>
             <Card.Header>Employees</Card.Header>
-            <Card.Body>
+            <Card.Body className="d-flex align-items-center justify-content-between">
                 {error && <strong>Error: {JSON.stringify(error)}</strong>}
                 {loading && <span>Loading...</span>}
                 {employeeDetails && (
