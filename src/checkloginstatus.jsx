@@ -10,7 +10,7 @@ export default function CheckLoginStatus() {
     const { setUser } = useUser();
 
     const handleLoginSuccess = (user) => {
-        setUser(user)
+        setUser(user);
         setLoggedIn(true);
     };
     return (
