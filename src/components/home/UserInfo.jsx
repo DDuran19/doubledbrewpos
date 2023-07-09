@@ -9,7 +9,7 @@ export function UserInfo() {
     useEffect(() => {
         const fetchUserDetails = async () => {
             setLoading(true);
-            getUserDetails(user.uid); // TODDDDOOSADASODJHASLDHKJASLDNHKJASHDKJASHDJKAHD
+            await getUserDetails(user.uid); // TODDDDOOSADASODJHASLDHKJASLDNHKJASHDKJASHDJKAHD
             setLoading(false);
         };
 
